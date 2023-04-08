@@ -1,0 +1,114 @@
+:root {
+    --primary-color: rgb(58, 8, 45);
+    --secondary-color: rgb(46, 12, 54);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  /* navbar */
+  #navbar ul {
+    list-style: none;
+  }
+  
+  #navbar ul li {
+    color: #4d4c4c;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    color: #333;
+
+  }
+  
+  #navbar ul li ul {
+    display: none;
+  }
+  
+  #navbar ul li:hover {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+  }
+  
+  #navbar ul li:hover a {
+    color: #fff;
+  }
+  
+  /*  dropdown */
+  #navbar ul li:hover ul {
+    position: absolute;
+    display: block;
+    left: 0;
+    margin-top: 1rem;
+    width: 190px;
+
+  }
+  
+  #navbar ul li:hover ul li {
+    display: block;
+    background: #e7e7e7;
+  }
+  
+  #navbar ul li:hover ul li a {
+    color: #4d4c4c;
+  }
+  
+  #navbar ul li:hover ul li:hover {
+    color: inherit;
+    background: #e0e0e0;
+  }
+  
+  #navbar ul li:hover ul li span {
+    float: right;
+    color: #fff;
+    background: var(--primary-color);
+    font-size: 0.6rem;
+
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  #navbar ul li:hover ul li:hover span {
+    background: var(--secondary-color);
+  }
+  
+  #showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 300px;
+    text-align: center;
+    padding: 0 2rem;
+    background: rgb(75, 1, 62);
+  }
+  
+  #showcase h1 {
+    color: #fff;
+    font-size: 4rem;
+  }
+  
+  @media(max-width: 600px) {
+    #navbar ul li {
+      display: block;
+    }
+  
+    #navbar ul li:hover ul {
+      width: 100%;
+      position: relative;
+    }
+  }
